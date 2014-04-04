@@ -6,3 +6,11 @@ lsjfdsaj
   <%= form.text_area :description %>
   <%= form.submit "Add Comment" %>
 <% end %>
+
+<div>
+  <% @comments.each do |comment| %>
+    <ul>
+      <li><%= comment.description %></li>
+    </ul>
+  <% end %>
+</div>
