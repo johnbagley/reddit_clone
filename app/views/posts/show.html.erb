@@ -1,0 +1,8 @@
+lsjfdsaj
+
+<h2><%= @post.title %></h2>
+
+<%= form_for([@post, @comment]) do |form| %>
+  <%= form.text_area :description %>
+  <%= form.submit "Add Comment" %>
+<% end %>

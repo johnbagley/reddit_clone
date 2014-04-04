@@ -9,10 +9,14 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.create(post_params)
+    @post = current_user.posts.create(post_params)
     redirect_to root_path 
   end
 
+  def show
+    @post = Post.find(params[:id])
+    @comment = Comment.new
+  end
   private
 
   def post_params

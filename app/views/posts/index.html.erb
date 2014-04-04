@@ -2,7 +2,10 @@
 <div>
   <% @posts.each do |post|%>
     <ul>
-      <li><%= link_to post.title, post.url %>
+      <div>
+        <li><%= link_to post.title, post.url %> was created by <%= post.user.email %></li>
+        <%= link_to "Comment", post_path(post) %>
+      </div>
     </ul>
   <% end %>
 </div>
