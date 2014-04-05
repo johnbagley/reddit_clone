@@ -1,5 +1,3 @@
-lsjfdsaj
-
 <h2><%= @post.title %></h2>
 
 <%= form_for([@post, @comment]) do |form| %>
@@ -10,7 +8,8 @@ lsjfdsaj
 <div>
   <% @comments.each do |comment| %>
     <ul>
-      <li><%= comment.description %></li>
+      <li><h3><%= comment.description %></h3></li>
+    commented by <%= comment.user.email %>
     </ul>
   <% end %>
 </div>

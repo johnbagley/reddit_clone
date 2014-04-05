@@ -3,7 +3,7 @@
   <% @posts.each do |post|%>
     <ul>
       <div>
-        <li><%= link_to post.title, post.url %> was created by <%= post.user.email %></li>
+        <li><h3><%= link_to post.title.upcase, post.url %></h3> submitted <%= time_ago_in_words(post.created_at)%> ago by <%= post.user.email %></li>
         <%= link_to "Comment", post_path(post) %>
       </div>
     </ul>
