@@ -1,7 +1,15 @@
-<h2>Add a Post</h2>
+<h2>Submit a New Link</h2>
 
 <%= form_for(@post) do |form| %>
   <%= form.text_field :title, placeholder: "Title" %>
   <%= form.text_field :url, placeholder: "URL" %>
-  <%= form.submit "Add Post" %>
+  <%= form.submit "Submit" %>
+<% end %>
+
+<h2>Submit a Text Post</h2>
+
+<%= form_for(@post) do |form| %>
+  <%= form.text_field :title, placeholder: "Title" %>
+  <%= form.text_area :body, placeholder: "Your Post" %>
+  <%= form.submit "Submit" %>
 <% end %>
